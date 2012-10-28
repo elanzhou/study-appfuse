@@ -21,6 +21,7 @@
             <item name="APT Format" href="format.html"/>
             <item name="FAQ" href="faq.html"/>
             <item name="Xdoc Example" href="xdoc.html"/>
+            <item name="maven" href="maven/pom.html"/>
         </menu>
     </body>
 </project>

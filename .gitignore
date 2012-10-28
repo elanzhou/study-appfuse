@@ -1,0 +1,5 @@
+/study-notes/target
+/study-notes/.idea
+*.iml
+/appfuse/.idea
+/tmp

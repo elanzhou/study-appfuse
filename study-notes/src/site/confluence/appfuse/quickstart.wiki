@@ -1,0 +1,2 @@
+h2. 参考资料
+* [使用 AppFuse 的七个理由|http://www.ibm.com/developerworks/cn/java/j-appfuse/index.html]

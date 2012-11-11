@@ -11,6 +11,12 @@
     <url>http://www.elanzone.com</url>
     <inceptionYear>2012</inceptionYear>
 
+    <scm>
+        <connection>scm:git:https://github.com/elanzhou/study-appfuse.git</connection>
+        <developerConnection>scm:git:https://github.com/elanzhou/study-appfuse.git</developerConnection>
+        <url>https://github.com/elanzhou/study-appfuse</url>
+    </scm>
+
     <distributionManagement>
         <!--<site>-->
             <!--<id>website</id>-->
@@ -20,38 +26,42 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <confluence.home>http://wiki.mailtech.cn/</confluence.home>
+        <maven.site.plugin.version>3.2</maven.site.plugin.version>
+        <maven.confluence.reporting.plugin.version>3.2.4</maven.confluence.reporting.plugin.version>
     </properties>
 
     <build>
         <plugins>
             <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-site-plugin</artifactId>
-                <version>3.2</version>
+                <version>${maven.site.plugin.version}</version>
                 <configuration>
                     <locales>zh_CN</locales>
                     <outputEncoding>UTF-8</outputEncoding>
-                    <!--<reportPlugins>-->
-                        <!--<plugin>-->
-                            <!--<groupId>org.bsc.maven</groupId>-->
-                            <!--<artifactId>maven-confluence-reporting-plugin</artifactId>-->
-                            <!--<version>3.2.4</version>-->
-                            <!--<reportSets>-->
-                                <!--<reportSet>-->
-                                    <!--<id>confluence</id>-->
-                                    <!--<configuration>-->
-                                        <!--<endPoint>{confluence.home}/rpc/xmlrpc</endPoint>-->
-                                        <!--<spaceKey>DOCS</spaceKey>-->
+                    <reportPlugins>
+                        <plugin>
+                            <groupId>org.bsc.maven</groupId>
+                            <artifactId>maven-confluence-reporting-plugin</artifactId>
+                            <version>${maven.confluence.reporting.plugin.version}</version>
+                            <reportSets>
+                                <reportSet>
+                                    <id>confluence</id>
+                                    <configuration>
+                                        <endPoint>{confluence.home}/rpc/xmlrpc</endPoint>
+                                        <spaceKey>~zj</spaceKey>
                                         <!--<serverId>server_id_configured_in_settings_xml</serverId>-->
-                                        <!--<parentPageTitle>Home</parentPageTitle>&lt;!&ndash; PARENT PAGE IN THE GIVEN SPACE &ndash;&gt;-->
-                                        <!--<title>custom_title</title>&lt;!&ndash; PAGE TITLE (default {project.build.finalName}) - SINCE 3.1.3 &ndash;&gt;-->
-                                    <!--</configuration>-->
-                                    <!--<reports>-->
-                                        <!--<report>confluence-summary</report>-->
-                                    <!--</reports>-->
-                                <!--</reportSet>-->
-                            <!--</reportSets>-->
-                        <!--</plugin>-->
-                    <!--</reportPlugins>-->
+                                        <parentPageTitle>mvnsiteroot</parentPageTitle><!-- PARENT PAGE IN THE GIVEN SPACE -->
+                                        <title>custom_title</title><!-- PAGE TITLE (default {project.build.finalName}) - SINCE 3.1.3 -->
+                                    </configuration>
+                                    <reports>
+                                        <report>confluence-summary</report>
+                                    </reports>
+                                </reportSet>
+                            </reportSets>
+                        </plugin>
+                    </reportPlugins>
                 </configuration>
                 <dependencies>
                     <dependency>

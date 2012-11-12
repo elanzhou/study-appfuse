@@ -1,0 +1,5 @@
+AndroMDA
+    http://www.andromda.org/docs/starting.html    
+# 按 [此说明|http://www.andromda.org/docs/andromda-maven-plugins/andromda-maven-plugin/howto.html] 将 AndroMDA 加入到 pom.xml
+# [Installing AndroMDA plugin for Maven 2|http://debugtrue.blogspot.hk/2007/06/installing-andromda-plugin-for-maven-2.html]
+
